@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <rect width="1200" height="600" fill="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"/>
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg1)"/>
+  <rect x="650" y="150" width="400" height="260" rx="12" fill="#1a1a2e"/>
+  <rect x="665" y="165" width="370" height="220" fill="#333"/>
+  <rect x="680" y="180" width="340" height="190" fill="#2d2d44"/>
+  <path d="M600 420 L650 400 L1050 400 L1100 420 L600 420" fill="#1a1a2e"/>
+  <rect x="600" y="420" width="500" height="30" rx="6" fill="#333"/>
+  <text x="150" y="250" fill="white" font-size="48" font-weight="bold">轻薄本 新品上市</text>
+  <text x="150" y="320" fill="rgba(255,255,255,0.8)" font-size="28">14英寸 全金属机身</text>
+  <rect x="150" y="360" width="160" height="50" rx="25" fill="#e1251b"/>
+  <text x="230" y="395" text-anchor="middle" fill="white" font-size="20" font-weight="bold">立即抢购</text>
+</svg>
