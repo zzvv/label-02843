@@ -1,0 +1,18 @@
+services:
+  frontend-user:
+    build:
+      context: ./frontend-user
+      dockerfile: Dockerfile
+    container_name: jd-mall-frontend-user
+    ports:
+      - "8081:80"
+    volumes:
+      # 挂载 mock 数据（如果需要动态更新）
+      - ./frontend-user/public/mock:/usr/share/nginx/html/mock:ro
+    restart: unless-stopped
+    networks:
+      - jd-mall-network
+
+networks:
+  jd-mall-network:
+    driver: bridge

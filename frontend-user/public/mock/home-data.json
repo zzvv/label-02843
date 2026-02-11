@@ -1,0 +1,125 @@
+{
+  "categories": [
+    { "id": 1, "name": "家用电器", "children": ["电视", "空调", "洗衣机"] },
+    { "id": 2, "name": "手机 / 运营商 / 数码", "children": ["手机", "耳机", "相机"] },
+    { "id": 3, "name": "电脑 / 办公", "children": ["笔记本", "平板", "外设产品"] },
+    { "id": 4, "name": "家居 / 家具 / 家装 / 厨具", "children": ["家纺", "灯具", "厨具"] },
+    { "id": 5, "name": "男装 / 女装 / 童装 / 内衣", "children": ["男装", "女装", "运动"] },
+    { "id": 6, "name": "美妆个护 / 清洁用品", "children": ["护肤", "彩妆", "香氛"] },
+    { "id": 7, "name": "食品 / 酒类 / 生鲜 / 特产", "children": ["零食", "粮油", "牛奶"] },
+    { "id": 8, "name": "汽车 / 汽车用品", "children": ["机油", "轮胎", "车载电器"] },
+    { "id": 9, "name": "运动 / 户外 / 乐器", "children": ["跑步鞋", "背包", "健身"] },
+    { "id": 10, "name": "游戏 / 电玩", "children": ["主机", "游戏", "周边"] },
+    { "id": 11, "name": "钟表 / 奢侈品", "children": ["手表", "首饰", "箱包"] },
+    { "id": 12, "name": "医药保健 / 计生情趣", "children": ["保健品", "医疗器械"] },
+    { "id": 13, "name": "图书 / 文娱 / 教育 / 电子书", "children": ["小说", "教辅", "杂志"] },
+    { "id": 14, "name": "机票 / 酒店 / 旅游 / 生活", "children": ["酒店", "机票", "门票"] },
+    { "id": 15, "name": "理财 / 众筹 / 白条 / 保险", "children": ["理财", "保险"] }
+  ],
+  "flashSaleList": [
+    {
+      "id": 1,
+      "title": "【秒杀】65英寸 4K 超高清液晶电视",
+      "img": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop",
+      "price": 1999,
+      "originPrice": 3299
+    },
+    {
+      "id": 2,
+      "title": "【秒杀】骁龙 8Gen 旗舰 5G 手机 12G+256G",
+      "img": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop",
+      "price": 2599,
+      "originPrice": 3299
+    },
+    {
+      "id": 3,
+      "title": "【秒杀】真无线降噪蓝牙耳机 音质升级版",
+      "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+      "price": 299,
+      "originPrice": 599
+    },
+    {
+      "id": 4,
+      "title": "【秒杀】机械键盘 热插拔 RGB 背光",
+      "img": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop",
+      "price": 259,
+      "originPrice": 399
+    }
+  ],
+  "recommendList": [
+    {
+      "id": 101,
+      "title": "轻薄本 14 英寸 全金属机身 学生商务办公本",
+      "img": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop",
+      "banner": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&h=600&fit=crop&q=90",
+      "price": 3999
+    },
+    {
+      "id": 102,
+      "title": "家用静音空调 大一匹 变频冷暖 挂机",
+      "img": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop",
+      "banner": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=600&fit=crop&q=90",
+      "price": 2199
+    },
+    {
+      "id": 103,
+      "title": "4L 大容量空气炸锅 家用多功能智能触控",
+      "img": "https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=400&h=400&fit=crop",
+      "banner": "https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=1200&h=600&fit=crop&q=90",
+      "price": 299
+    },
+    {
+      "id": 104,
+      "title": "电竞游戏显示器 27 英寸 2K 165Hz 高刷",
+      "img": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=400&fit=crop",
+      "banner": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=1200&h=600&fit=crop&q=90",
+      "price": 1299
+    },
+    {
+      "id": 105,
+      "title": "高蛋白每日坚果礼盒 750g 休闲零食",
+      "img": "https://images.unsplash.com/photo-1589924691995-8dc4c0fea3a1?w=400&h=400&fit=crop",
+      "banner": "https://images.unsplash.com/photo-1589924691995-8dc4c0fea3a1?w=1200&h=600&fit=crop&q=90",
+      "price": 89
+    }
+  ],
+  "brandList": [
+    {
+      "id": 201,
+      "name": "Apple 苹果旗舰店",
+      "logo": "https://images.unsplash.com/photo-1611791484670-ce19b801d192?w=200&h=80&fit=crop",
+      "desc": "官方直营 品质保障"
+    },
+    {
+      "id": 202,
+      "name": "Huawei 华为京东自营旗舰店",
+      "logo": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200&h=80&fit=crop",
+      "desc": "爆款直降 抢购不停"
+    },
+    {
+      "id": 203,
+      "name": "MI 小米官方旗舰店",
+      "logo": "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=200&h=80&fit=crop",
+      "desc": "智能家居 一站购齐"
+    },
+    {
+      "id": 204,
+      "name": "Nike 耐克官方旗舰店",
+      "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=80&fit=crop",
+      "desc": "经典球鞋 潮流穿搭"
+    },
+    {
+      "id": 205,
+      "name": "Adidas 阿迪达斯旗舰店",
+      "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=80&fit=crop",
+      "desc": "运动装备 一应俱全"
+    },
+    {
+      "id": 206,
+      "name": "Haier 海尔官方旗舰店",
+      "logo": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=80&fit=crop",
+      "desc": "品质家电 国民品牌"
+    }
+  ]
+}
+

@@ -1,0 +1,98 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei',
+    system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  background-color: #f4f4f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+#app {
+  width: 100%;
+}
+
+.jd-container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 大桌面端 (≥1920px) */
+@media (min-width: 1920px) {
+  .jd-container {
+    max-width: 1400px;
+  }
+}
+
+/* 桌面端 (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .jd-container {
+    max-width: 1190px;
+  }
+}
+
+/* 中等桌面端 (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .jd-container {
+    max-width: 1000px;
+  }
+}
+
+/* 平板端 (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .jd-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+/* 移动端 (<768px) */
+@media (max-width: 767px) {
+  .jd-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
