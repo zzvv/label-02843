@@ -13,6 +13,10 @@ const navLinks = [
 const go = (path) => {
   router.push(path)
 }
+
+const showTip = (name) => {
+  alert(`【${name}】功能正在开发中，敬请期待！`)
+}
 </script>
 
 <template>
@@ -34,9 +38,9 @@ const go = (path) => {
         </a>
       </nav>
       <div class="header-right">
-        <a href="javascript:;" class="link">我的订单</a>
-        <a href="javascript:;" class="link">我的京东</a>
-        <a href="javascript:;" class="link">京东会员</a>
+        <a href="javascript:;" class="link" @click="showTip('我的订单')">我的订单</a>
+        <a href="javascript:;" class="link" @click="showTip('我的京东')">我的京东</a>
+        <a href="javascript:;" class="link" @click="showTip('京东会员')">京东会员</a>
       </div>
     </div>
   </header>

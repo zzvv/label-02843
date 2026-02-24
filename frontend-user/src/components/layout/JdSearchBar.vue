@@ -6,9 +6,20 @@ const keyword = ref('')
 const hotWords = ['手机', '电脑', '耳机', '键盘', '空调', '零食大礼包']
 
 const onSearch = () => {
-  if (!keyword.value.trim()) return
-  // 实际项目中此处会跳转搜索结果页，这里仅做占位
-  console.log('搜索：', keyword.value)
+  if (!keyword.value.trim()) {
+    alert('请输入搜索关键词')
+    return
+  }
+  alert(`搜索【${keyword.value}】功能正在开发中，敬请期待！`)
+}
+
+const onHotWordClick = (word) => {
+  keyword.value = word
+  alert(`搜索【${word}】功能正在开发中，敬请期待！`)
+}
+
+const onCartClick = () => {
+  alert('【我的购物车】功能正在开发中，敬请期待！')
 }
 </script>
 
@@ -27,12 +38,12 @@ const onSearch = () => {
           <button class="btn-search" @click="onSearch">搜索</button>
         </div>
         <div class="hot-words">
-          <a v-for="item in hotWords" :key="item" href="javascript:;" class="hot-word">
+          <a v-for="item in hotWords" :key="item" href="javascript:;" class="hot-word" @click="onHotWordClick(item)">
             {{ item }}
           </a>
         </div>
       </div>
-      <div class="cart">
+      <div class="cart" @click="onCartClick">
         <span class="icon">🛒</span>
         <span class="text">我的购物车</span>
       </div>
@@ -49,14 +60,16 @@ const onSearch = () => {
   display: flex;
   align-items: center;
   padding: 15px 0 10px;
+  gap: 30px;
 }
 
 .logo {
-  width: 190px;
-  height: 120px;
+  width: 120px;
+  height: 50px;
   background: #e1251b;
   border-radius: 4px;
   position: relative;
+  flex-shrink: 0;
 }
 
 .logo::after {
@@ -66,14 +79,13 @@ const onSearch = () => {
   top: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 4px;
 }
 
 .search-box {
   flex: 1;
-  margin: 0 40px;
 }
 
 .search-input {
@@ -130,6 +142,8 @@ const onSearch = () => {
   color: #e1251b;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .cart .icon {

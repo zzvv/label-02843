@@ -9,10 +9,10 @@
       </div>
       <div class="links">
         <div class="link-row">
-          <a v-for="item in linkRow1" :key="item" href="javascript:;">{{ item }}</a>
+          <a v-for="item in linkRow1" :key="item" href="javascript:;" @click="onLinkClick(item)">{{ item }}</a>
         </div>
         <div class="link-row">
-          <a v-for="item in linkRow2" :key="item" href="javascript:;">{{ item }}</a>
+          <a v-for="item in linkRow2" :key="item" href="javascript:;" @click="onLinkClick(item)">{{ item }}</a>
         </div>
         <p class="copyright">
           本页面为 Vue 技术栈仿京东首页教学示例，所有数据与图片均为示例数据，与京东官方无关。
@@ -32,6 +32,10 @@ const services = [
 
 const linkRow1 = ['关于我们', '联系我们', '商家入驻', '营销中心', '友情链接', '销售联盟']
 const linkRow2 = ['京东社区', '风险监测', '隐私政策', '京东公益', 'English Site']
+
+const onLinkClick = (name) => {
+  alert(`【${name}】功能正在开发中，敬请期待！`)
+}
 </script>
 
 <style scoped>

@@ -60,7 +60,7 @@ npm run dev
 - **构建工具**：Vite 7
 - **路由管理**：Vue Router 5
 - **状态管理**：Pinia 3
-- **HTTP 请求**：Axios
+- **HTTP 请求**：Axios（请求本地 Mock 数据，架构与真实 API 调用一致）
 - **容器化**：Docker + Docker Compose
 - **Web 服务器**：Nginx（生产环境）
 

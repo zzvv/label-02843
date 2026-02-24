@@ -20,28 +20,28 @@
     {
       "id": 1,
       "title": "【秒杀】65英寸 4K 超高清液晶电视",
-      "img": "/images/products/tv.svg",
+      "img": "/images/products/tv.jpg",
       "price": 1999,
       "originPrice": 3299
     },
     {
       "id": 2,
       "title": "【秒杀】骁龙 8Gen 旗舰 5G 手机 12G+256G",
-      "img": "/images/products/phone.svg",
+      "img": "/images/products/phone.jpg",
       "price": 2599,
       "originPrice": 3299
     },
     {
       "id": 3,
       "title": "【秒杀】真无线降噪蓝牙耳机 音质升级版",
-      "img": "/images/products/earphone.svg",
+      "img": "/images/products/earphone.jpg",
       "price": 299,
       "originPrice": 599
     },
     {
       "id": 4,
       "title": "【秒杀】机械键盘 热插拔 RGB 背光",
-      "img": "/images/products/keyboard.svg",
+      "img": "/images/products/keyboard.jpg",
       "price": 259,
       "originPrice": 399
     }
@@ -50,36 +50,36 @@
     {
       "id": 101,
       "title": "轻薄本 14 英寸 全金属机身 学生商务办公本",
-      "img": "/images/products/laptop.svg",
-      "banner": "/images/banners/laptop-banner.svg",
+      "img": "/images/products/laptop.jpg",
+      "banner": "/images/banners/laptop-banner.jpg",
       "price": 3999
     },
     {
       "id": 102,
       "title": "家用静音空调 大一匹 变频冷暖 挂机",
-      "img": "/images/products/airconditioner.svg",
-      "banner": "/images/banners/home-banner.svg",
+      "img": "/images/products/airconditioner.jpg",
+      "banner": "/images/banners/home-banner.jpg",
       "price": 2199
     },
     {
       "id": 103,
       "title": "4L 大容量空气炸锅 家用多功能智能触控",
-      "img": "/images/products/airfryer.svg",
-      "banner": "/images/banners/airfryer-banner.svg",
+      "img": "/images/products/airfryer.jpg",
+      "banner": "/images/banners/airfryer-banner.jpg",
       "price": 299
     },
     {
       "id": 104,
       "title": "电竞游戏显示器 27 英寸 2K 165Hz 高刷",
-      "img": "/images/products/monitor.svg",
-      "banner": "/images/banners/monitor-banner.svg",
+      "img": "/images/products/monitor.jpg",
+      "banner": "/images/banners/monitor-banner.jpg",
       "price": 1299
     },
     {
       "id": 105,
       "title": "高蛋白每日坚果礼盒 750g 休闲零食",
-      "img": "/images/products/nuts.svg",
-      "banner": "/images/banners/nuts-banner.svg",
+      "img": "/images/products/nuts.jpg",
+      "banner": "/images/banners/nuts-banner.jpg",
       "price": 89
     }
   ],
@@ -87,37 +87,37 @@
     {
       "id": 201,
       "name": "Apple 苹果旗舰店",
-      "logo": "/images/brands/apple.svg",
+      "logo": "/images/brands/apple.jpg",
       "desc": "官方直营 品质保障"
     },
     {
       "id": 202,
       "name": "Huawei 华为京东自营旗舰店",
-      "logo": "/images/brands/huawei.svg",
+      "logo": "/images/brands/huawei.jpg",
       "desc": "爆款直降 抢购不停"
     },
     {
       "id": 203,
       "name": "MI 小米官方旗舰店",
-      "logo": "/images/brands/xiaomi.svg",
+      "logo": "/images/brands/xiaomi.jpg",
       "desc": "智能家居 一站购齐"
     },
     {
       "id": 204,
       "name": "Nike 耐克官方旗舰店",
-      "logo": "/images/brands/nike.svg",
+      "logo": "/images/brands/nike.jpg",
       "desc": "经典球鞋 潮流穿搭"
     },
     {
       "id": 205,
       "name": "Adidas 阿迪达斯旗舰店",
-      "logo": "/images/brands/adidas.svg",
+      "logo": "/images/brands/adidas.jpg",
       "desc": "运动装备 一应俱全"
     },
     {
       "id": 206,
       "name": "Haier 海尔官方旗舰店",
-      "logo": "/images/brands/haier.svg",
+      "logo": "/images/brands/haier.jpg",
       "desc": "品质家电 国民品牌"
     }
   ]

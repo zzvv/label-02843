@@ -9,7 +9,7 @@
 - **框架**：Vue 3 `<script setup>` 语法
 - **路由**：Vue Router（首页 `/`、`/flash-sale`、`/brands` 等路由跳转）
 - **状态管理**：Pinia（`src/store/index.js`）
-- **数据请求**：Axios 模拟 API 请求（读取 `public/mock/home-data.json` 商品数据）
+- **数据请求**：Axios 请求本地 Mock 数据（读取 `public/mock/home-data.json` 商品数据）
 - **组件化开发**：布局与业务模块拆分在 `src/components` 与 `src/views`
 - **响应式设计**：针对主流 PC 屏幕宽度（≥1000px）进行布局适配
 - **交互动画**：轮播图淡入淡出、卡片悬浮阴影、按钮与导航 hover 效果等
@@ -51,8 +51,9 @@
 
 ### 关键实现说明
 
-- **Axios 模拟 API 请求**
+- **Axios 请求本地 Mock 数据**
   - 在 `src/store/index.js` 中创建 Axios 实例 `request`，通过 `request.get('/mock/home-data.json')` 获取本地 JSON 数据。
+  - 虽然数据来源是本地文件，但使用 Axios 发起 HTTP 请求的方式与真实 API 调用一致，便于后续对接真实后端接口。
   - `useProductStore` 的 `fetchHomeData` 动作中统一拉取分类、秒杀、推荐和品牌数据并存入 Pinia 状态。
 
 - **路由跳转**

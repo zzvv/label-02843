@@ -4,6 +4,18 @@ import JdCarousel from '../home/JdCarousel.vue'
 import JdFlashSale from '../home/JdFlashSale.vue'
 import JdRecommend from '../home/JdRecommend.vue'
 import JdBrandZone from '../home/JdBrandZone.vue'
+
+const onLogin = () => {
+  alert('【登录】功能正在开发中，敬请期待！')
+}
+
+const onRegister = () => {
+  alert('【注册】功能正在开发中，敬请期待！')
+}
+
+const onMoreNotice = () => {
+  alert('【更多公告】功能正在开发中，敬请期待！')
+}
 </script>
 
 <template>
@@ -19,14 +31,14 @@ import JdBrandZone from '../home/JdBrandZone.vue'
             <p class="tips">登录后可以查看专属优惠</p>
           </div>
           <div class="btns">
-            <button class="btn primary">登录</button>
-            <button class="btn">注册</button>
+            <button class="btn primary" @click="onLogin">登录</button>
+            <button class="btn" @click="onRegister">注册</button>
           </div>
         </div>
         <div class="notice">
           <div class="notice-header">
             <span>公告</span>
-            <a href="javascript:;">更多 &gt;</a>
+            <a href="javascript:;" @click="onMoreNotice">更多 &gt;</a>
           </div>
           <ul class="notice-list">
             <li>京东双十一大促，限时秒杀天天有</li>
@@ -60,6 +72,7 @@ import JdBrandZone from '../home/JdBrandZone.vue'
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 470px;
 }
 
 .user-card {
@@ -70,6 +83,7 @@ import JdBrandZone from '../home/JdBrandZone.vue'
   grid-template-columns: 50px 1fr;
   grid-template-rows: auto auto;
   column-gap: 10px;
+  flex-shrink: 0;
 }
 
 .avatar {
@@ -109,6 +123,8 @@ import JdBrandZone from '../home/JdBrandZone.vue'
   border: 1px solid #e1251b;
   font-size: 12px;
   margin-right: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
 
 .btn.primary {
@@ -118,10 +134,11 @@ import JdBrandZone from '../home/JdBrandZone.vue'
 
 .btn:not(.primary) {
   color: #e1251b;
+  background: #fff;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .notice {
@@ -129,6 +146,8 @@ import JdBrandZone from '../home/JdBrandZone.vue'
   border-radius: 4px;
   padding: 10px 12px;
   font-size: 12px;
+  flex: 1;
+  overflow: hidden;
 }
 
 .notice-header {
