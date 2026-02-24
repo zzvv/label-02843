@@ -78,7 +78,7 @@ watch(
 <style scoped>
 .jd-carousel {
   position: relative;
-  width: 590px;
+  width: 100%;
   height: 470px;
   overflow: hidden;
   border-radius: 4px;

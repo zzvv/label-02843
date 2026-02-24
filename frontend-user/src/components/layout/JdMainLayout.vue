@@ -52,7 +52,7 @@ import JdBrandZone from '../home/JdBrandZone.vue'
 
 .main-top {
   display: grid;
-  grid-template-columns: 190px 590px 190px;
+  grid-template-columns: 190px 1fr 200px;
   gap: 10px;
 }
 
@@ -76,14 +76,14 @@ import JdBrandZone from '../home/JdBrandZone.vue'
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop')
-      no-repeat center/cover,
-    #f5f5f5;
+  background: #f5f5f5;
   grid-row: 1 / span 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 14px;
+  color: #e1251b;
+  font-weight: bold;
 }
 
 .info .hello {
@@ -156,14 +156,14 @@ import JdBrandZone from '../home/JdBrandZone.vue'
 /* 大桌面端 (≥1920px) */
 @media (min-width: 1920px) {
   .main-top {
-    grid-template-columns: 200px 650px 200px;
+    grid-template-columns: 200px 1fr 220px;
   }
 }
 
 /* 中等桌面端 (1024px - 1439px) */
 @media (min-width: 1024px) and (max-width: 1439px) {
   .main-top {
-    grid-template-columns: 180px 540px 180px;
+    grid-template-columns: 180px 1fr 180px;
   }
 
   .jd-main {

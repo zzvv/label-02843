@@ -99,6 +99,8 @@ const recommendList = computed(() => productStore.recommendList)
 
 .thumb img {
   max-height: 100%;
+  max-width: 100%;
+  width: auto;
 }
 
 .title {

@@ -131,6 +131,8 @@ const flashList = computed(() => productStore.flashSaleList)
 
 .img-wrap img {
   max-height: 100%;
+  max-width: 100%;
+  width: auto;
 }
 
 .title {

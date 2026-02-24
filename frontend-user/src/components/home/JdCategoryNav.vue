@@ -22,11 +22,13 @@ const categories = computed(() => productStore.categories)
 
 <style scoped>
 .category-nav {
-  width: 190px;
+  width: 100%;
+  height: 470px;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 10px 0;
   box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .category-item {

@@ -85,6 +85,8 @@ const brandList = computed(() => productStore.brandList)
 
 .logo img {
   max-height: 100%;
+  max-width: 100%;
+  width: auto;
 }
 
 .name {
