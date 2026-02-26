@@ -1,11 +1,26 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useProductStore } from '../../store'
 import { formatPrice } from '../../utils'
+import ProductModal from '../common/ProductModal.vue'
 
+const router = useRouter()
 const productStore = useProductStore()
 
 const flashList = computed(() => productStore.flashSaleList)
+
+const modalVisible = ref(false)
+const selectedProduct = ref(null)
+
+const goFlashSale = () => {
+  router.push('/flash-sale')
+}
+
+const showDetail = (item) => {
+  selectedProduct.value = item
+  modalVisible.value = true
+}
 </script>
 
 <template>
@@ -15,10 +30,10 @@ const flashList = computed(() => productStore.flashSaleList)
         <span class="tag">京东秒杀</span>
         <span class="sub">限时抢购 好物不等人</span>
       </div>
-      <a class="more" href="javascript:;">更多秒杀 &gt;</a>
+      <a class="more" href="javascript:;" @click="goFlashSale">更多秒杀 &gt;</a>
     </header>
     <div class="flash-list">
-      <article v-for="item in flashList" :key="item.id" class="flash-item">
+      <article v-for="item in flashList" :key="item.id" class="flash-item" @click="showDetail(item)">
         <div class="img-wrap">
           <img v-lazy="item.img" :alt="item.title" />
         </div>
@@ -30,6 +45,7 @@ const flashList = computed(() => productStore.flashSaleList)
       </article>
     </div>
   </section>
+  <ProductModal v-model:visible="modalVisible" :product="selectedProduct" />
 </template>
 
 <style scoped>

@@ -1,25 +1,27 @@
 <script setup>
 import { ref } from 'vue'
+import { useToast } from '../../composables/useToast'
 
+const { showToast } = useToast()
 const keyword = ref('')
 
 const hotWords = ['手机', '电脑', '耳机', '键盘', '空调', '零食大礼包']
 
 const onSearch = () => {
   if (!keyword.value.trim()) {
-    alert('请输入搜索关键词')
+    showToast('请输入搜索关键词')
     return
   }
-  alert(`搜索【${keyword.value}】功能正在开发中，敬请期待！`)
+  showToast(`搜索【${keyword.value}】功能正在开发中，敬请期待`)
 }
 
 const onHotWordClick = (word) => {
   keyword.value = word
-  alert(`搜索【${word}】功能正在开发中，敬请期待！`)
+  showToast(`搜索【${word}】功能正在开发中，敬请期待`)
 }
 
 const onCartClick = () => {
-  alert('【我的购物车】功能正在开发中，敬请期待！')
+  showToast('【我的购物车】功能正在开发中，敬请期待')
 }
 </script>
 
@@ -37,11 +39,7 @@ const onCartClick = () => {
           />
           <button class="btn-search" @click="onSearch">搜索</button>
         </div>
-        <div class="hot-words">
-          <a v-for="item in hotWords" :key="item" href="javascript:;" class="hot-word" @click="onHotWordClick(item)">
-            {{ item }}
-          </a>
-        </div>
+
       </div>
       <div class="cart" @click="onCartClick">
         <span class="icon">🛒</span>
@@ -60,12 +58,12 @@ const onCartClick = () => {
   display: flex;
   align-items: center;
   padding: 15px 0 10px;
-  gap: 30px;
+  gap: 20px;
 }
 
 .logo {
   width: 120px;
-  height: 50px;
+  height: 40px;
   background: #e1251b;
   border-radius: 4px;
   position: relative;
@@ -79,13 +77,14 @@ const onCartClick = () => {
   top: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 4px;
 }
 
 .search-box {
   flex: 1;
+  min-width: 0;
 }
 
 .search-input {
@@ -93,15 +92,17 @@ const onCartClick = () => {
   border: 2px solid #e1251b;
   border-radius: 2px;
   overflow: hidden;
+  height: 40px;
 }
 
 .search-input input {
   flex: 1;
   border: none;
   padding: 0 12px;
-  height: 36px;
+  height: 100%;
   outline: none;
   font-size: 14px;
+  min-width: 0;
 }
 
 .btn-search {
@@ -110,6 +111,7 @@ const onCartClick = () => {
   color: #fff;
   font-size: 16px;
   transition: background 0.2s;
+  flex-shrink: 0;
 }
 
 .btn-search:hover {
@@ -132,8 +134,8 @@ const onCartClick = () => {
 
 .cart {
   width: 140px;
-  height: 36px;
-  border-radius: 18px;
+  height: 40px;
+  border-radius: 20px;
   border: 1px solid #eee;
   display: flex;
   align-items: center;
@@ -149,5 +151,8 @@ const onCartClick = () => {
 .cart .icon {
   margin-right: 6px;
 }
-</style>
 
+.cart:hover {
+  border-color: #e1251b;
+}
+</style>

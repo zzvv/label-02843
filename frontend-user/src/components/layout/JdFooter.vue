@@ -23,6 +23,10 @@
 </template>
 
 <script setup>
+import { useToast } from '../../composables/useToast'
+
+const { showToast } = useToast()
+
 const services = [
   { title: '多', desc: '品类齐全，轻松购物' },
   { title: '快', desc: '多仓直发，极速配送' },
@@ -34,7 +38,7 @@ const linkRow1 = ['关于我们', '联系我们', '商家入驻', '营销中心'
 const linkRow2 = ['京东社区', '风险监测', '隐私政策', '京东公益', 'English Site']
 
 const onLinkClick = (name) => {
-  alert(`【${name}】功能正在开发中，敬请期待！`)
+  showToast(`【${name}】功能正在开发中，敬请期待`)
 }
 </script>
 
@@ -82,4 +86,3 @@ const onLinkClick = (name) => {
   color: #b0b0b0;
 }
 </style>
-

@@ -1,11 +1,20 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useProductStore } from '../../store'
 import { formatPrice } from '../../utils'
+import ProductModal from '../common/ProductModal.vue'
 
 const productStore = useProductStore()
 
 const recommendList = computed(() => productStore.recommendList)
+
+const modalVisible = ref(false)
+const selectedProduct = ref(null)
+
+const showDetail = (item) => {
+  selectedProduct.value = item
+  modalVisible.value = true
+}
 </script>
 
 <template>
@@ -14,7 +23,7 @@ const recommendList = computed(() => productStore.recommendList)
       <h3>为你推荐</h3>
     </header>
     <div class="recommend-grid">
-      <article v-for="item in recommendList" :key="item.id" class="recommend-item">
+      <article v-for="item in recommendList" :key="item.id" class="recommend-item" @click="showDetail(item)">
         <div class="thumb">
           <img v-lazy="item.img" :alt="item.title" />
         </div>
@@ -23,6 +32,7 @@ const recommendList = computed(() => productStore.recommendList)
       </article>
     </div>
   </section>
+  <ProductModal v-model:visible="modalVisible" :product="selectedProduct" />
 </template>
 
 <style scoped>

@@ -4,17 +4,20 @@ import JdCarousel from '../home/JdCarousel.vue'
 import JdFlashSale from '../home/JdFlashSale.vue'
 import JdRecommend from '../home/JdRecommend.vue'
 import JdBrandZone from '../home/JdBrandZone.vue'
+import { useToast } from '../../composables/useToast'
+
+const { showToast } = useToast()
 
 const onLogin = () => {
-  alert('【登录】功能正在开发中，敬请期待！')
+  showToast('【登录】功能正在开发中，敬请期待')
 }
 
 const onRegister = () => {
-  alert('【注册】功能正在开发中，敬请期待！')
+  showToast('【注册】功能正在开发中，敬请期待')
 }
 
 const onMoreNotice = () => {
-  alert('【更多公告】功能正在开发中，敬请期待！')
+  showToast('【更多公告】功能正在开发中，敬请期待')
 }
 </script>
 

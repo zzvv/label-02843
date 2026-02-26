@@ -1,4 +1,8 @@
 <script setup>
+import JdToast from './components/common/JdToast.vue'
+import { useToast } from './composables/useToast'
+
+const { toastVisible, toastMessage } = useToast()
 </script>
 
 <template>
@@ -7,6 +11,7 @@
       <component :is="Component" :key="route.path" />
     </transition>
   </router-view>
+  <JdToast v-model:visible="toastVisible" :message="toastMessage" />
 </template>
 
 <style>
@@ -14,7 +19,6 @@
   width: 100%;
 }
 
-/* 页面路由过渡动画 */
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;

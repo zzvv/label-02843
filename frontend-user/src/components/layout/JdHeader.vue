@@ -1,8 +1,10 @@
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
+import { useToast } from '../../composables/useToast'
 
 const route = useRoute()
 const router = useRouter()
+const { showToast } = useToast()
 
 const navLinks = [
   { name: '首页', path: '/' },
@@ -15,7 +17,7 @@ const go = (path) => {
 }
 
 const showTip = (name) => {
-  alert(`【${name}】功能正在开发中，敬请期待！`)
+  showToast(`【${name}】功能正在开发中，敬请期待`)
 }
 </script>
 
@@ -31,7 +33,7 @@ const showTip = (name) => {
           :key="item.path"
           href="javascript:void(0);"
           class="nav-item"
-          :class="{ active: route.path === item.path || (item.path === '/' && route.path === '/') }"
+          :class="{ active: route.path === item.path }"
           @click="go(item.path)"
         >
           {{ item.name }}
@@ -59,14 +61,20 @@ const showTip = (name) => {
   height: 30px;
 }
 
+.header-left {
+  width: 120px;
+  flex-shrink: 0;
+}
+
 .header-left .city {
-  margin-right: 20px;
+  font-size: 12px;
 }
 
 .header-nav {
   display: flex;
   flex: 1;
   gap: 10px;
+  margin-left: 20px;
 }
 
 .nav-item {
@@ -94,4 +102,3 @@ const showTip = (name) => {
   color: #e1251b;
 }
 </style>
-
