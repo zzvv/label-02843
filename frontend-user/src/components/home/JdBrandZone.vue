@@ -1,15 +1,23 @@
 <script setup>
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useProductStore } from '../../store'
+import { useToast } from '../../composables/useToast'
 
 const router = useRouter()
+const route = useRoute()
 const productStore = useProductStore()
+const { showToast } = useToast()
 
 const brandList = computed(() => productStore.brandList)
+const isBrandsPage = computed(() => route.path === '/brands')
 
 const goBrands = () => {
   router.push('/brands')
+}
+
+const onBrandClick = (item) => {
+  showToast(`即将进入【${item.name}】，功能正在开发中，敬请期待`)
 }
 </script>
 
@@ -17,10 +25,10 @@ const goBrands = () => {
   <section class="brand-zone">
     <header class="brand-header">
       <h3>品牌旗舰店</h3>
-      <a href="javascript:;" class="more" @click="goBrands">全部品牌 &gt;</a>
+      <a v-if="!isBrandsPage" href="javascript:;" class="more" @click="goBrands">全部品牌 &gt;</a>
     </header>
     <div class="brand-grid">
-      <article v-for="item in brandList" :key="item.id" class="brand-item">
+      <article v-for="item in brandList" :key="item.id" class="brand-item" @click="onBrandClick(item)">
         <div class="logo">
           <img v-lazy="item.logo" :alt="item.name" />
         </div>

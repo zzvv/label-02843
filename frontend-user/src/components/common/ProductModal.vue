@@ -1,5 +1,8 @@
 <script setup>
 import { formatPrice } from '../../utils'
+import { useToast } from '../../composables/useToast'
+
+const { showToast } = useToast()
 
 const props = defineProps({
   visible: { type: Boolean, default: false },
@@ -14,6 +17,14 @@ const close = () => {
 
 const onOverlayClick = (e) => {
   if (e.target === e.currentTarget) close()
+}
+
+const addToCart = () => {
+  showToast(`已将【${props.product?.title}】加入购物车`)
+}
+
+const buyNow = () => {
+  showToast(`【立即购买】功能正在开发中，敬请期待`)
 }
 </script>
 
@@ -43,8 +54,8 @@ const onOverlayClick = (e) => {
                 <p>本页面为仿真示例，不涉及真实交易</p>
               </div>
               <div class="modal-actions">
-                <button class="btn-cart" @click="close">加入购物车</button>
-                <button class="btn-buy" @click="close">立即购买</button>
+                <button class="btn-cart" @click="addToCart">加入购物车</button>
+                <button class="btn-buy" @click="buyNow">立即购买</button>
               </div>
             </div>
           </div>

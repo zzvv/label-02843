@@ -1,24 +1,10 @@
 <script setup>
-import { ref, watch } from 'vue'
-
-const props = defineProps({
+defineProps({
   message: { type: String, default: '' },
   visible: { type: Boolean, default: false },
-  duration: { type: Number, default: 2000 },
 })
 
-const emit = defineEmits(['update:visible'])
-
-watch(
-  () => props.visible,
-  (val) => {
-    if (val && props.duration > 0) {
-      setTimeout(() => {
-        emit('update:visible', false)
-      }, props.duration)
-    }
-  }
-)
+defineEmits(['update:visible'])
 </script>
 
 <template>

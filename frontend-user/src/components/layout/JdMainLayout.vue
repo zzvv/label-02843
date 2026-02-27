@@ -75,7 +75,6 @@ const onMoreNotice = () => {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 470px;
 }
 
 .user-card {
