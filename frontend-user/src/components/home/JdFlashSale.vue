@@ -88,7 +88,7 @@ const showDetail = (item) => {
 
 .flash-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
 
@@ -116,6 +116,10 @@ const showDetail = (item) => {
 
 .flash-item:nth-child(4) {
   animation-delay: 0.4s;
+}
+
+.flash-item:nth-child(5) {
+  animation-delay: 0.5s;
 }
 
 .flash-item:hover {

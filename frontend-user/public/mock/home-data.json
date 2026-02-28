@@ -44,6 +44,13 @@
       "img": "/images/products/keyboard.jpg",
       "price": 259,
       "originPrice": 399
+    },
+    {
+      "id": 5,
+      "title": "【秒杀】空气炸锅 4L大容量 智能触控",
+      "img": "/images/products/airfryer.jpg",
+      "price": 199,
+      "originPrice": 399
     }
   ],
   "recommendList": [

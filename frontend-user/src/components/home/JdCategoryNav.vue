@@ -1,16 +1,22 @@
 <script setup>
 import { computed } from 'vue'
 import { useProductStore } from '../../store'
+import { useToast } from '../../composables/useToast'
 
 const productStore = useProductStore()
+const { showToast } = useToast()
 
 const categories = computed(() => productStore.categories)
+
+const onCategoryClick = (item) => {
+  showToast(`【${item.name}】功能正在开发中，敬请期待`)
+}
 </script>
 
 <template>
   <aside class="category-nav">
     <ul>
-      <li v-for="item in categories" :key="item.id" class="category-item">
+      <li v-for="item in categories" :key="item.id" class="category-item" @click="onCategoryClick(item)">
         <span class="name">{{ item.name }}</span>
         <span class="sub" v-if="item.children?.length">
           <span v-for="sub in item.children" :key="sub" class="sub-item">{{ sub }}</span>
