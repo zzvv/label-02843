@@ -50,10 +50,7 @@ const showDetail = (item) => {
 
 <style scoped>
 .flash-sale {
-  background: #fff;
-  border-radius: 4px;
-  padding: 12px;
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .flash-header {
@@ -146,9 +143,9 @@ const showDetail = (item) => {
 }
 
 .img-wrap img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .title {

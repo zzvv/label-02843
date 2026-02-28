@@ -41,10 +41,7 @@ const onBrandClick = (item) => {
 
 <style scoped>
 .brand-zone {
-  margin-top: 20px;
-  background: #fff;
-  border-radius: 4px;
-  padding: 12px;
+  margin-top: 0;
 }
 
 .brand-header {
@@ -90,17 +87,23 @@ const onBrandClick = (item) => {
 }
 
 .logo {
-  height: 44px;
+  width: 120px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  margin: 0 auto 8px;
+  overflow: hidden;
+  border: 1px solid #f3f3f3;
+  border-radius: 4px;
+  background: #fff;
 }
 
 .logo img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .name {

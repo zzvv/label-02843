@@ -37,7 +37,7 @@ const showDetail = (item) => {
 
 <style scoped>
 .recommend {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .recommend-header {
@@ -108,9 +108,9 @@ const showDetail = (item) => {
 }
 
 .thumb img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .title {

@@ -36,7 +36,7 @@ const buyNow = () => {
           <button class="modal-close" @click="close" aria-label="关闭">&times;</button>
           <div class="modal-body">
             <div class="modal-img">
-              <img :src="product.img || product.banner" :alt="product.title" />
+              <img :src="product.img" :alt="product.title" />
             </div>
             <div class="modal-info">
               <h3 class="modal-title">{{ product.title }}</h3>
@@ -125,8 +125,9 @@ const buyNow = () => {
 }
 
 .modal-img img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .modal-info {

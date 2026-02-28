@@ -53,9 +53,15 @@ const onMoreNotice = () => {
     </div>
 
     <div class="jd-container main-bottom">
-      <JdFlashSale />
-      <JdRecommend />
-      <JdBrandZone />
+      <div class="module-container">
+        <JdFlashSale />
+      </div>
+      <div class="module-container">
+        <JdRecommend />
+      </div>
+      <div class="module-container">
+        <JdBrandZone />
+      </div>
     </div>
   </main>
 </template>
@@ -172,6 +178,17 @@ const onMoreNotice = () => {
 
 .main-bottom {
   margin-top: 10px;
+}
+
+.module-container {
+  margin-bottom: 15px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.module-container:last-child {
+  margin-bottom: 0;
 }
 
 /* 大桌面端 (≥1920px) */
