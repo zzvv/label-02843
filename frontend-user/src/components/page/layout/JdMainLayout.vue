@@ -1,9 +1,9 @@
 <script setup>
-import JdCategoryNav from '../home/JdCategoryNav.vue'
-import JdCarousel from '../home/JdCarousel.vue'
-import JdFlashSale from '../home/JdFlashSale.vue'
-import JdRecommend from '../home/JdRecommend.vue'
-import JdBrandZone from '../home/JdBrandZone.vue'
+import JdCategoryNav from '../../home/JdCategoryNav.vue'
+import JdCarousel from '../../home/JdCarousel.vue'
+import JdFlashSale from '../../home/JdFlashSale.vue'
+import JdRecommend from '../../home/JdRecommend.vue'
+import JdBrandZone from '../../home/JdBrandZone.vue'
 import { useToast } from '../../composables/useToast'
 
 const { showToast } = useToast()

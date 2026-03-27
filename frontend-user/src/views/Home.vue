@@ -1,10 +1,10 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useProductStore } from '../store'
-import JdHeader from '../components/layout/JdHeader.vue'
-import JdSearchBar from '../components/layout/JdSearchBar.vue'
-import JdMainLayout from '../components/layout/JdMainLayout.vue'
-import JdFooter from '../components/layout/JdFooter.vue'
+import JdHeader from '../components/page/layout/JdHeader.vue'
+import JdSearchBar from '../components/page/layout/JdSearchBar.vue'
+import JdMainLayout from '../components/page/layout/JdMainLayout.vue'
+import JdFooter from '../components/page/layout/JdFooter.vue'
 import LoadingSpinner from '../components/common/LoadingSpinner.vue'
 import ErrorMessage from '../components/common/ErrorMessage.vue'
 
